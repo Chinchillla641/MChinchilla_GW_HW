@@ -16,8 +16,6 @@ with open(csvpath, newline='') as csvfile:
     print(header)
 
     # Extract first row to avoid appending to net_change_list
-    # YOUR CODE HERE
-
     for row in reader:
 
     # Track the total
@@ -37,26 +35,22 @@ with open(csvpath, newline='') as csvfile:
             greatest_decrease[0] = row[0]
             
 # Calculate the Average Net Change
-# YOUR CODE HERE
-
-
-print(total_months)
-print(net)
-print(greatest_increase)
-print(greatest_decrease)
+monthly_avg = net / total_months
 
 # Generate Output Summary
 output = (
     f"\nFinancial Analysis\n"
     f"----------------------------\n"
     f"Total Months: {total_months}\n"
-    f"Total: ${total_net}\n"
-    f"Average  Change: ${net_monthly_avg:.2f}\n"
+    f"Total: ${net}\n"
+    f"Average  Change: ${monthly_avg:.2f}\n"
     f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n"
     f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
 
 # Print the output (to terminal)
-# YOUR CODE HERE
+print(output)
 
 # Export the results to text file
-# YOUR CODE HERE
+text_file = open("output.txt", "w")
+text_file.write(output)
+text_file.close()
