@@ -6,8 +6,11 @@ import re
 import os
 
 # Files to load and output (Remember to change these)
-file_to_load = os.path.realpath("D:\\Git\\GWU-ARL-DATA-PT-09-2019-U-C\\02-Homework\\03-Python\\Instructions\\Part-3\\PyParagraph\\raw_data\\paragraph_1.txt")
-file_to_output = os.path.realpath("D:\\Git\\MChinchilla_GW_HW\\03_HW_MC\\python-challenge\\PyParagraph")
+p = "paragraph_1"
+#p = "paragraph_2"
+
+file_to_load = os.path.realpath(f"D:\\Git\\GWU-ARL-DATA-PT-09-2019-U-C\\02-Homework\\03-Python\\Instructions\\Part-3\\PyParagraph\\raw_data\\{p}.txt")
+file_to_output = os.path.realpath(f"D:\\Git\\MChinchilla_GW_HW\\03_HW_MC\\python-challenge\\PyParagraph\\output_{p}.txt")
 
 # String variable to hold the paragraph contents
 paragraph = ""
@@ -49,16 +52,29 @@ words_per_sentence = []
 for sentence in sentence_split:
 
     # Calculate the number of words in each sentence and add to the list
-    #YOUR CODE HERE
-
+    words_sentence = re.findall("[.!?]", sentence)
+    words_sentence2 = re.findall(" ", sentence)
+    words_sentence.extend(words_sentence2)
+    
+    print(words_sentence)
+    
+    num_words = len(words_sentence)
+    words_per_sentence.append(num_words)
+print(words_per_sentence)
 # Calculate the avg word count (per sentence)
-#YOUR CODE HERE
+avgwc = sum(words_per_sentence) / float(sentence_count)
     
 # Generate Paragraph Analysis Output
-#YOUR CODE HERE
+output = (f"Paragraph Analysis ({p})\n"
+          "-----------------\n"
+          f"Approximate Word Count: {word_count} words\n"
+          f"Approximate Sentence Count: {sentence_count} sentences\n"
+          f"Average Letter Count: {round(avg_letter_count, 2)} letters\n"
+          f"Average Sentence Length: {round(avgwc, 2)} words")
 
 # Print all of the results (to terminal)
-#YOUR CODE HERE
+print(output)
     
 # Save the results to analysis text file
-#YOUR CODE HERE
+with open(file_to_output, "w") as txt_file:
+    txt_file.write(output)
