@@ -1,0 +1,51 @@
+State,Measles_cases _2019,Mumps_cases_2019,Pertussis_cases_2018,Religious_Exemption,Philosophical_Exemption
+Alabama,0,43909,219,Yes,No
+Alaska,1,43832,92,Yes,No
+Arizona,1,100-299,239,Yes,Yes
+Arkansas,0,20-49,99,Yes,Yes
+California,68,100-299,2315,No,No
+Colorado,1,50-99,614,Yes,Yes
+Connecticut,3,43909,43,Yes,No
+Delaware,0,43832,190,Yes,No
+Florida,3,100-299,14,Yes,No
+Georgia,7,43832,326,Yes,No
+Hawaii,1,43832,195,Yes,No
+Idaho,2,43832,33,Yes,Yes
+Illinois,9,50-99,396,Yes,No
+Indiana,1,50-99,370,Yes,No
+Iowa,2,43909,184,Yes,No
+Kansas,0,43909,162,Yes,No
+Kentucky,2,43909,198,Yes,No
+Louisiana,0,100-299,125,Yes,Yes
+Maine,1,43909,446,Yes,Yes
+Maryland,5,43909,119,Yes,No
+Massachusetts,2,50-99,266,Yes,No
+Michigan,46,20-49,646,Yes,Yes
+Minnesota,0,43909,397,Yes,Yes
+Mississippi,0,20-49,43,No,No
+Missouri,1,100-299,170,Yes,Yes
+Montana,0,43909,143,Yes,No
+Nebraska,0,50-99,161,Yes,No
+Nevada,1,43832,86,Yes,No
+New Hampshire,1,0,137,Yes,No
+New Jersey,18,50-99,275,Yes,No
+New Mexico,1,20-49,242,Yes,No
+New York,914,100-299,373,Yes,No
+North Carolina,0,50-99,185,Yes,No
+North Dakota,0,43909,389,Yes,Yes
+Ohio,1,50-99,637,Yes,Yes
+Oklahoma,4,43909,103,Yes,Yes
+Oregon,24,20-49,499,Yes,Yes
+Pennsylvania,16,300+,462,Yes,Yes
+Rhode Island,0,43909,34,Yes,No
+South Carolina,0,100-299,198,Yes,No
+South Dakota,0,43909,163,Yes,No
+Tennessee,5,20-49,123,Yes,No
+Texas,21,300+,1167,Yes,Yes
+Utah,0,20-49,432,Yes,Yes
+Vermont,0,43832,34,Yes,No
+Virginia,1,50-99,245,Yes,No
+Washington,86,20-49,627,Yes,Yes
+West Virginia,0,43832,27,No,No
+Wisconsin,0,20-49,700,Yes,Yes
+Wyoming,0,0,62,Yes,No
