@@ -1,0 +1,78 @@
+---
+title: "Pipe Dreams Are Made of These"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Dependency
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+### Read CSV file
+```{r}
+students <-read_csv("students.csv")
+schools <- read_csv("schools.csv")
+```
+### Preview tibble
+```{r}
+students %>% head()
+```
+```{r}
+schools %>% head()
+```
+
+#### Join two tibbles
+```{r}
+data2 = left_join(students, schools, by=c("school_name"))
+data2 %>% head()
+```
+
+### Summary table
+```{r}
+schocount <- students$school_name %>% 
+  unique() %>% 
+  length()
+
+stucount <- students %>% nrow()
+
+tot_budget <- schools %>% 
+  summarize(sum(budget))
+
+avg_math <- summarize(students, mean(math_score))
+avg_read <- summarize(students, mean(reading_score))
+
+pass_read <- students %>% filter(reading_score >= 70) %>% nrow() * 100 / stucount
+
+pass_math <- students %>% filter(math_score >= 70) %>% nrow() * 100 / stucount
+
+pass_overall <- (pass_math + pass_read) / 2
+```
+### Convert dta type
+```{r}
+tot_budget <- tot_budget %>% sapply(as.numeric)
+avg_math <- avg_math %>% sapply(as.numeric)
+avg_read <- avg_read %>% sapply(as.numeric)
+```
+### Summary table tibble
+```{r}
+paste("School count: ", schocount)
+paste("Student count: ", stucount)
+paste("Total budget: ", tot_budget)
+paste("Average reading score: ", avg_read)
+paste("Average math score: ", avg_math)
+paste("% passing reading: ", pass_read)
+paste("% passing math: ", pass_math)
+paste("Overall passing rate: ", pass_overall)
+
+district_summary <- frame_data(~Total.Schools, ~Total.Students, ~Total.Budget, ~Avg.Math, ~Avg.Reading, ~Percent.Passing.Math, ~Percent.Passing.Reading, ~Overall.Passing.Rate,schocount, stucount, tot_budget, avg_read, avg_math, pass_math, pass_read, pass_overall
+)
+district_summary
+```
+
+### Summaries by schools
+```{r}
+students %>% group_by(school_name) %>% summarize(avg.reading=mean(reading_score), avg.math=mean(math_score), tot.stud=n())
+```
