@@ -13,8 +13,8 @@ around 17 minutes. This phenomena is true not only within a day but between days
 One possible explaination is that poeple tend to use the the service for intermediate distances (around 17 minutes) and although the 
 rate at which the take these trips per hour changes, it's possible that on a per-person basis they are taking a usual, familiar trip. 
 Finally we look at the total time users ride CitiBike depending on whether they have a subscription to the service or just an 
-occasional customer. As we would expect, Subscribers spend more time on the biked as a total than casual Customers. This makes sense 
+occasional customer. As we would expect, Subscribers spend more time on the bikes as a total than casual Customers. This makes sense 
 as a Subscriber would try to get more "bang for their buck" than the Customer paying on a per-ride basis. We also see the Subscriber 
-riding during the previous commute hours previously mentioned since many potential have this subscription with the explicit intent to 
-use as their commute. The casual rider, on the other hand, has a more sporadic ride schedule consistent with the intent of ridin for 
-leisure.
+riding during the commute hours previously mentioned since many potentially have this subscription with the explicit intent of 
+using it as their primary form of commute. The casual rider, on the other hand, has a more sporadic ride schedule consistent with a 
+behavior of riding for leisure.
