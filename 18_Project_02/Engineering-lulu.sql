@@ -49,3 +49,21 @@ ALTER TABLE public."Measels_24months_2016"
     ADD COLUMN "State" char(20);
 ALTER TABLE public."Measels_24months_2016"
     ADD COLUMN "_2016" decimal(3,1);
+	
+-- Create Table "measels_state_data_clean"
+CREATE TABLE public."measels_state_data_clean"
+(
+)
+;
+ALTER TABLE public."measels_state_data_clean"
+    OWNER to vqaaeqeiojsagw;
+
+-- Generate columns
+ALTER TABLE public."measels_state_data_clean"
+    ADD COLUMN "Admin1Name" char(20);
+ALTER TABLE public."measels_state_data_clean"
+    ADD COLUMN "PeriodStartDate" char(20);
+ALTER TABLE public."measels_state_data_clean"
+    ADD COLUMN "PeriodEndDate" char(20);
+ALTER TABLE public."measels_state_data_clean"
+    ADD COLUMN "CountValue" int;
